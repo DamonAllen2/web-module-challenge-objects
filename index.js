@@ -16,10 +16,16 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
-}
-
+function createMenuItem(name, price, category){
+  var example ={name: "Cafe Latte", price: 4, category: "Drinks"}
+  var newItem = Object.create(example);
+  newItem.name = name;
+  newItem.price = price;
+  newItem.category = category;
+  return newItem;
+  console.log(newItem);
+}  
+createMenuItem('tacos', 8, 'lunch')
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -36,7 +42,6 @@ Test your createMenuItems function by doing the following:
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the burger object below that automatically calculates price depending on the string received as a parameter. 
-
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
   2. The discount method should accept a string as a parameter and take "teacher", "student", or "public" as an argument.

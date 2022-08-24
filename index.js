@@ -57,14 +57,20 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   discount: function (person){
-    if( person === 'teacher' && person === 'student') {
-      return(18-(.25*this.price));
+    if( person === "teacher") {
+      let teacherPrice = (18-(.25*this.price));
+      return teacherPrice;
     } else if(person === 'public'){
-      return(18-(.10*this.price))
+      let studentPrice = (18-(.10*this.price));
+      return studentPrice;
+    } else if(person === 'student') {
+      let studentPrice = (18-(.25*this.price));
+      return studentPrice;
     }
   }
 }
-burger.discount('teacher')
+burger.discount("teacher")
+
 
 
 
@@ -85,7 +91,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log()
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
